@@ -1,6 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"cmp"
+	"fmt"
+	"os"
+
+	"github.com/Jinduoxia666/go-learn/example"
+)
 
 func main() {
 	fmt.Println("Hello, World!")
@@ -21,4 +28,12 @@ func main() {
 	slice2 := make([]int, 2)
 	slice2[1] = 199
 	fmt.Println(slice2)
+	example.SayJinduoxia()
+	fmt.Println(23)
+	fmt.Println(cmp.Compare(1, 3))
+
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	fmt.Println(scanner.Text())
+
 }
